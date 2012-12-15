@@ -1,0 +1,18 @@
+name: go-get-proxy
+mem: 32M
+
+# disabled because of http://bugs.activestate.com/show_bug.cgi?id=96540
+#requirements:
+#  running:
+#    ubuntu: [golang]
+
+hooks:
+  pre-running:
+    - "bash ./install-go.sh"
+    - "bash ./setup-key.sh"
+env:
+  PATH: "$HOME/go/bin:$PATH"
+  GOROOT: "$HOME/go"
+  GOPATH: "$HOME/gopath"
+
+

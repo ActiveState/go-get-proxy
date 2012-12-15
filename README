@@ -1,1 +1,12 @@
 appengine -> http -> go-get-proxy (this) -> {git,hg,svn,bzr} -> internet
+
+# Stackato notes
+
+## Known limitations
+
+after deployment, ssh into the app and run:
+
+  git clone ssh://gitolite@gitolite.activestate.com/tail /tmp/x
+
+then hit "yes" to the ssh host key verification (the app doesn't
+handle this gracefully).
