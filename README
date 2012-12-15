@@ -2,6 +2,11 @@ appengine -> http -> go-get-proxy (this) -> {git,hg,svn,bzr} -> internet
 
 # Stackato notes
 
+copy the key first, then push:
+
+  cp ~/.ssh/srid-gitolite-readonly .
+  s push -n
+
 ## Known limitations
 
 after deployment, ssh into the app and run:
